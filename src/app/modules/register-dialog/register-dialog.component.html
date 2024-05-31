@@ -1,0 +1,10 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title>Cuenta no registrada</h2>
+  <mat-dialog-content>
+    No hemos podido encontrar tu cuenta, registrate para acceder a tus tareas
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button   (click)="closeDialog('close')">No</button>
+    <button mat-button mat-flat-button class="confirm-button" cdkFocusInitial (click)="closeDialog('create')">Crear</button>
+  </mat-dialog-actions>
+</div>

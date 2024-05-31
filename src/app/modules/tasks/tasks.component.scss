@@ -1,0 +1,71 @@
+main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+  .tasks-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  h2 {
+    text-align: center;
+    color: rgb(226 232 240);
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .fab-button {
+    cursor: pointer;
+    color: rgb(255 255 255);
+    margin-left: 20px;
+    border-radius: 0.75rem;
+    padding: 4px 8px;
+    border: none;
+    background: #1e3a8a;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+  .fab-button:hover {
+    background: #21367b;
+  }
+  .sign-out{
+    padding: 4px 8px;
+    border: none;
+    background: #1e3a8a;
+    border-radius: 0.75rem;
+    color: rgb(255 255 255);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .sign-out:hover {
+    background: #21367b;
+  }
+
+  .no-task, .loading{
+    font-size: 42px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .loading{
+    display: block;
+  }
+  @media (max-width: 499px) { 
+    .no-task, .loading{
+      font-size: 24px;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+    }
+    
+  }
+}
+
+

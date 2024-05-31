@@ -1,0 +1,61 @@
+
+mat-card {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(30 41 59);
+  border-radius: 0.75rem;
+  box-shadow: none;
+  border: 1px solid #ffffff1a;
+  color: rgb(255 255 255);
+  .custom-header {
+    padding: 16px 16px 0;
+    width: 100%;
+    mat-card-title{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+
+mat-card-content,
+mat-card-subtitle {
+  color: rgb(226 232 240);
+}
+mat-card-actions {
+  padding: 16px;
+  flex: 1;
+  align-items: end;
+}
+
+mat-card-subtitle span {
+  display: block;
+  margin-top: 1em;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    cursor: pointer;
+    background: #1e3a8a;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255 255 255);
+    padding: 4px 8px;
+  }
+  button:hover {
+    background: #21367b;
+  }
+  button.delete-button {
+    background: #dc2626;
+  }
+  button.delete-button:hover {
+    background: #b91c1c;
+  }
+}

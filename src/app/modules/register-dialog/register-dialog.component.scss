@@ -1,0 +1,20 @@
+.dialog-container{
+  background-color: rgb(30 41 59);
+  color: rgb(255, 255, 255);
+}
+.dialog-container > * {
+  color: inherit !important;
+}
+
+button {
+  color: inherit !important;
+}
+
+mat-dialog-actions{
+  button.confirm-button:not(:disabled){
+    background: #1e3a8a;
+  }
+  .confirm-button:hover {
+    background: #21367b;
+  }
+}

@@ -1,0 +1,35 @@
+<main>
+  <h2>Gestiona tus tareas</h2>
+  <button
+    title="crear nueva tarea"
+    class="fab-button"
+    mat-mini-fab
+    color="accent"
+    (click)="openDialog()"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+  <button
+    title="Volver al inicio de sesion"
+    class="sign-out"
+    (click)="signOut()"
+  >
+    <mat-icon> logout </mat-icon>
+  </button>
+  <div *ngIf="myTasks?.length === 0 && !loading">
+    <h2 class="no-task">No hay tareas para mostrar en este momento...</h2>
+  </div>
+  <div *ngIf="loading">
+    <span class="loading">Estamos cargando tus tareas...</span>
+  </div>
+  <section *ngIf="myTasks && myTasks!.length > 0" class="tasks-container">
+    @for (task of myTasks; track task) {
+    <app-task
+      [task]="task"
+      (dialoglEvent)="openDialog($event)"
+      (deleteTaskEvent)="deleteTask($event)"
+      (updateTaskStatusEvent)="updateTaskStatus($event)"
+    />
+    }
+  </section>
+</main>

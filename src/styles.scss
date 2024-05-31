@@ -1,4 +1,12 @@
 @import "assets/styles/theme";
 
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Inter, "Helvetica Neue", sans-serif; }
+
+body{
+  background-color: rgb(15 23 42 / 1);
+}

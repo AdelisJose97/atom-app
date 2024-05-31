@@ -5,7 +5,7 @@
   ],
   "plugins": ["unused-imports", "simple-import-sort"],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "**/tsconfig.json"
   },
   "overrides": [
     {
@@ -26,6 +26,10 @@
         "import/first": "error",
         "import/newline-after-import": "error",
         "import/no-duplicates": "error",
+        "linebreak-style": [
+          "error",
+          "windows"
+        ],
         "max-len": [
           "error",
           120
