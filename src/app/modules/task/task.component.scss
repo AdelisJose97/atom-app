@@ -12,7 +12,6 @@ mat-card {
     width: 100%;
     mat-card-title{
       width: 100%;
-      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -20,15 +19,19 @@ mat-card {
   mat-card-content,
   mat-card-subtitle {
     color: rgb(226 232 240);
+    
+  }
+  mat-card-subtitle {
+    color: rgb(226 232 240);
+    p{
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      }
   }
   mat-card-content{
     padding: 0 24px;
-    p:last-child{
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    }
+    
   }
 }
 
