@@ -31,7 +31,7 @@ export class TasksService {
 
     delete(taskId: string): Observable<void> {
         return this.http
-            .delete<any>(`${apiUrl}/tasks/${taskId}`)
+            .delete<void>(`${apiUrl}/tasks/${taskId}`)
             .pipe(
                 catchError(handleError)
             );
