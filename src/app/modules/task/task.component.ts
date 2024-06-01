@@ -1,3 +1,4 @@
+import { DatePipe } from "@angular/common";
 import {
     Component, EventEmitter, Input, OnInit, Output
 } from "@angular/core";
@@ -14,7 +15,7 @@ import { ChangeStatusTask } from "../utils";
 @Component({
     selector: "app-task",
     standalone: true,
-    imports: [MatCardModule, MatIconModule, MatSlideToggleModule, FormsModule],
+    imports: [MatCardModule, MatIconModule, MatSlideToggleModule, FormsModule, DatePipe],
     templateUrl: "./task.component.html",
     styleUrl: "./task.component.scss"
 })

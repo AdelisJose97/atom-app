@@ -17,17 +17,24 @@ mat-card {
       text-overflow: ellipsis;
     }
   }
+  mat-card-content,
+  mat-card-subtitle {
+    color: rgb(226 232 240);
+  }
+  mat-card-content{
+    padding: 0 24px;
+    p:last-child{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+  }
 }
 
 
-mat-card-content,
-mat-card-subtitle {
-  color: rgb(226 232 240);
-}
 
-mat-card-content{
-  padding: 0 24px;
-}
+
 mat-card-actions {
   padding: 24px;
   flex: 1;

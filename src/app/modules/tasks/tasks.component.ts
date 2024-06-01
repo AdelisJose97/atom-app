@@ -35,7 +35,7 @@ export class TasksComponent implements OnInit {
     ) {}
 
     showSuccess(message: string = "Se ha realizado la accion con exito") {
-        this.toastr.success(message, "Genial");
+        this.toastr.success(message, "Hecho");
     }
     showError(message: string = "No se ha realizado la accion con exito") {
         this.toastr.error(message, "Opps");
