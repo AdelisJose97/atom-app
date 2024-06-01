@@ -41,6 +41,6 @@ export class TaskComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.isDone = this.task ? this.task.isDone : false;
+        this.isDone = this.task?.isDone ?? false;
     }
 }

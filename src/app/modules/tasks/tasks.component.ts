@@ -122,8 +122,11 @@ export class TasksComponent implements OnInit {
             } else if (result.action === EDIT_TASK_DIALOG_STATUS) {
                 if (result.data) {
                     const payload: Task = {
-                        ...result.data,
+                        id: result.data.id,
+                        title: result.data.title,
+                        description: result.data.description
                     };
+
                     this.updateTask(payload);
                 }
             }
