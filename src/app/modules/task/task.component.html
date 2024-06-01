@@ -2,12 +2,12 @@
   <div class="custom-header">
     <mat-card-title>Titulo: {{ task?.title }}</mat-card-title>
     <mat-card-subtitle>
-      <span> Status: {{ task?.isDone ? 'Completada' : 'Pendiente' }} </span>
+      <p>Descripcion: {{ task?.description }}</p>
     </mat-card-subtitle>
   </div>
   <mat-card-content>
     <p>Fecha de creacion: {{ task?.createdAt | date: 'medium' }}</p>
-    <p>Descripcion: {{ task?.description }}</p>
+    <span> Status: {{ task?.isDone ? 'Completada' : 'Pendiente' }} </span>
   </mat-card-content>
   <mat-card-actions>
     <div class="actions">
@@ -17,7 +17,7 @@
       <button title="borrar tarea" class="delete-button" (click)="handleDeleteTask(task?.id!)" mat-fab color="primary">
         <mat-icon>delete</mat-icon>
       </button>
-      <mat-slide-toggle (ngModelChange)="onToggleChange($event)" [(ngModel)]="isDone"></mat-slide-toggle>
+      <mat-slide-toggle title='Cambiar status de la tarea' (ngModelChange)="onToggleChange($event)" [(ngModel)]="isDone"></mat-slide-toggle>
     </div>
   </mat-card-actions>
 </mat-card>
